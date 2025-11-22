@@ -84,7 +84,7 @@ INSERT INTO AUTHOR
 VALUES ('A1', 'Chong', 'Raul', 'rfc@ibm.com', 'Toronto', 'CA')
 ```
 
-multiple insert
+**multiple insert**
 
 ```sql
 INSERT INTO AUTHOR
@@ -92,3 +92,65 @@ INSERT INTO AUTHOR
 VALUES ('A1', 'Chong', 'Raul', 'rfc@ibm.com', 'Toronto', 'CA')
 VALUES ('A1', 'Smith', 'Smith', 'ra@ibm.com', 'Toronto', 'CA')
 ```
+
+### UPDATE and DELETE statement
+
+**UPDATE**
+
+```sql
+UPDATE AUTHOR SET LASTNAME='KATTA' FIRSTNAME='LAKSHMI' WHERE AUTHOR_ID='A2'
+```
+
+**DELETE**
+
+```sql
+DELETE FROM AUTHOR 
+  WHERE AUTHOR_ID='A2'
+```
+
+```sql
+DELETE FROM AUTHOR 
+  WHERE AUTHOR_ID IN ('A1', 'A2')
+```
+
+
+
+
+**Hands-on INSERT, UPDATE, DELETE statements**
+
+`SELECT * From Instructor;`
+
+![alt text](image1-5.png)
+
+```sql
+INSERT INTO Instructor 
+    (ins_id, lastname, firstname, city, country)
+VALUES (4, 'Kurt', 'Rojas', 'Vancouver', 'CA')
+```
+
+![alt text](image1-6.png)
+
+
+```sql
+update Instructor set lastname='Roxas' where ins_id=4
+```
+
+![alt text](image1-7.png)
+
+
+```sql
+delete from Instructor where ins_id=4
+```
+
+![alt text](image1-8.png)
+
+### Summary
+
+- Data manipulation language (DML) statements read and modify data 
+- The search condition of the WHERE clause uses a predicate to refine the search
+- The SQL retrieves specific data from the database
+- INSERT, UPDATE, and DELETE statements are DML statements for adding/modifying tables
+
+
+![alt text](image1-9.png)
+
